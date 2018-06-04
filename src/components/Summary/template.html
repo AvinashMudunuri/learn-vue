@@ -1,0 +1,14 @@
+<table class='table b-table table-striped table-hover'>
+  <thead>
+    <tr>
+      <th v-for='field in fields'>{{ field }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr v-for='(item) in items'>
+      <td><a href="#/joke/`${item.id}`">{{ item.id }}</a></td>
+      <td>{{ item.joke }}</td>
+      <td>{{ item.rating }}</td>
+    </tr>
+  </tbody>
+</table>

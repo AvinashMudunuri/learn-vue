@@ -1,0 +1,14 @@
+<div>
+    <b-card-group deck>
+      <b-card header="Featured"
+              header-tag="header">
+        <img v-if="$store.state.loading" src="../../assets/loading_dots.gif" />
+        <div v-else class="card-text">
+            {{ $store.state.info.joke }}
+            <br/><br/>
+          <b-button variant="success" @click='rateJoke($store.state.info, true)'>Like</b-button>
+          <b-button variant="danger" @click='rateJoke($store.state.info, false)'>DisLike</b-button>
+        </div>
+      </b-card>
+    </b-card-group>
+</div>
